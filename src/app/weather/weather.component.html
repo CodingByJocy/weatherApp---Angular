@@ -1,0 +1,18 @@
+<div>
+    <div *ngIf="weatherData">
+      <span>{{weatherData.sys?.name}}, {{weatherData.sys?.country}}</span>
+      <span>{{weatherData.main?.temp | number: '1.0-0'}} C</span> 
+      <br>
+      <span>{{weatherData.dt | date: 'fullDate'}}</span>
+    </div>
+
+    <div *ngIf="weatherData">
+      <img [src]="current?.image" alt="">
+      
+    </div>
+
+    <div *ngIf="weatherData">
+      {{weatherData.weather?.description}}
+    </div>
+  </div>
+  
