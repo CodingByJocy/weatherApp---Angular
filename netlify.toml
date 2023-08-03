@@ -1,6 +1,6 @@
 [build]
   command = "ng build"
-  publish = "dist/weatherApp"
+  publish = "dist/weather-app"
 
 
 [[redirects]]
