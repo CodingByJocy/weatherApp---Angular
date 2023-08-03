@@ -1,9 +1,10 @@
 [build]
-  command = "ng build "
-  publish = "."
+  command = "ng build --prod"
+  publish = "dist/weatherApp"
+
 
 [[redirects]]
-  from = "/*"
-  to = "src/app/app.component.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200
 
