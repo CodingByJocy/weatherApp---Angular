@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /* /src/app/app-component.html 200
+=======
+/* /src/app/app-component.html 200
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880

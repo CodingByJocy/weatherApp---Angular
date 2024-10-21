@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [build]
   command = "ng build"
   publish = "dist/weather-app"
@@ -8,3 +9,15 @@ from = "/*"
 to = "/index.html"
 status = 200
 
+=======
+[build]
+  command = "ng build"
+  publish = "dist/weather-app"
+
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880

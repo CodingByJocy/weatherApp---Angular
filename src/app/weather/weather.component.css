@@ -1,3 +1,323 @@
+<<<<<<< HEAD
+:root {
+  --blue-1: #3c429e;
+  --blue-2: #4c52ad;
+  --yellow-1: #fac742;
+  --white: #fff;
+  --grey-1: #ededed;
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+  --shadow-light: rgba(255, 255, 255, 0.1);
+}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  width: 70%;
+  height: 80vh;
+  margin: auto;
+  margin-bottom: 10px;
+  background-image: url(../../assets/Capturer.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+}
+mat-card {
+  margin-right: 5px;
+}
+.forecastimage {
+  width: 70px;
+}
+
+.title {
+  font-family: "Roboto Slab", serif;
+  margin-bottom: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 80px;
+  font-family: "Playfair Display", serif;
+}
+.title p {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin-top: 35px;
+  margin-bottom: -10px;
+}
+
+.container {
+  height: 50vh;
+  /* background-color: #4C52AD;*/
+  border-radius: 20px;
+  /* border: 2px solid black;*/
+  box-shadow: 10px 10px 10px var(--shadow-dark);
+}
+
+.weather-container {
+  position: relative;
+}
+img {
+  width: 200%;
+  display: block;
+  margin-left: -90px;
+  border-radius: 20px;
+}
+
+.info-block {
+  position: absolute;
+  top: 40%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.overlay-content {
+  text-align: center;
+}
+.info-block-value {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+.search {
+  margin-bottom: 1em;
+  margin: auto;
+
+  text-align: center;
+  padding: 1px;
+  font-size: 20px;
+}
+.search-bar {
+  outline: none;
+  border-radius: 10px 0 10px 0;
+  color: #21222c;
+  font-size: 0.9em;
+  margin-top: 150px;
+  text-align: center;
+  position: sticky;
+}
+.btn {
+  padding: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 0 10px 0 10px;
+  margin-left: 5px;
+}
+
+.cityname {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.temp-num {
+  font-size: 50px;
+}
+
+/*--------------------------------------------------------queries-------------*/
+@media only screen and (min-width: 310px) and (max-width: 575px) {
+  .body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .title > h1,
+  p {
+    font-size: 40px;
+  }
+  .container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  .search {
+    width: 70%; 
+    height: 80vh;
+    /* Full width on smaller screens */
+  }
+  .info-block {
+    width: 100%;
+    font-size: 16px;
+  }
+  .title {
+    font-size: 18px; /* Decrease font size for smaller screens */
+  }
+  img {
+    width: 250px;
+    align-items: center;
+    border-radius: 20px;
+    margin: auto;
+    margin-right: 10px;
+  }
+  .cardContainer {
+    display: row;
+    justify-content: center;
+    margin-top: -30px;
+  }
+  mat-card {
+    margin-right: 5px;
+    width: 70px;
+  }
+  mat-card p {
+    font-size: 10px;
+    left: 5%;
+  }
+  .forecastimage {
+    width: 50px;
+  }
+  .upperImg {
+    width: 90%;
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .body {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .search {
+    width: 200px;
+  }
+
+  .info-block {
+    width: 100%;
+    font-size: 30px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .body {
+    width: 100%;
+  }
+  .search {
+    width: 200px;
+  }
+  .container {
+    width: 100%;
+  }
+  .info-block {
+    width: 120%;
+    font-size: 18px;
+  }
+  .title {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+  .body {
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .info-block {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1401px) and (max-width: 2000px) {
+  .body {
+    width: 80%;
+  }
+  .search {
+    width: 200px;
+  }
+  .container {
+    width: 100%;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .info-block {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 2001px) and (max-width: 4000px) {
+  .body {
+    width: 500%;
+  }
+  .search {
+    width: 200px;
+  }
+  .container {
+    width: 200vw;
+  }
+  .title {
+    font-size: 300px;
+  }
+  .info-block {
+    width: 100%;
+    font-size: 25px;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  .body {
+    width: 80%;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .info-block {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  .body {
+    width: 80%;
+  }
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+  .info-block {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+=======
 :root {
     --blue-1: #3C429E;
     --blue-2: #4C52AD;
@@ -251,3 +571,4 @@
     font-size: 18px;
   }
 }
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880

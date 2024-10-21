@@ -12,6 +12,17 @@ interface ICurrentWeatherData {
     icon: string
   }],
   main: {
+<<<<<<< HEAD
+    feels_like: number;
+    temp_kf: number;
+    grnd_level: number;
+    sea_level: number;
+    temp_max: number;
+    temp_min: number;
+    humidity: number;
+    pressure: number;
+=======
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880
     temp: number
   },
   sys:{
@@ -36,6 +47,27 @@ export class WeatherService {
       map(data => this.transformToICurrentWeather(data))
     );
   }
+<<<<<<< HEAD
+
+  
+
+  private transformToICurrentWeather(data: ICurrentWeatherData): ICurrentWeather {
+   
+    return {
+      
+      name: data.name,
+      dt: data.dt*1000,
+      base: data.sys.country,
+    
+      main: {
+        temp: this.convertKelvinToCelsius(data.main.temp),
+        pressure: data.main.pressure || 0,
+        humidity: data.main.humidity || 0,
+        temp_min: this.convertKelvinToCelsius(data.main.temp_min || 0),
+        temp_max: this.convertKelvinToCelsius(data.main.temp_max || 0),
+      },
+      
+=======
   
 
   private transformToICurrentWeather(data: ICurrentWeatherData): ICurrentWeather {
@@ -50,6 +82,7 @@ export class WeatherService {
         temp_min: 0,
         temp_max: 0
       },
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880
      /*  id: data.weather[0].description */
     };
   }

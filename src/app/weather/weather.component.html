@@ -1,5 +1,74 @@
 
 <body>
+<<<<<<< HEAD
+<div class="title">
+  <h1 class="mat-h1">Local Weather</h1>
+  <p class="mat-small">Your city, your forecast, right now!</p>
+</div>
+
+<div class="search">
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <mat-form-field class="search-bar">
+      <input matInput type="text" placeholder="Search city" name="city" [(ngModel)]="cityName">
+    </mat-form-field>
+        <button mat-raised-button color="accent" class="btn" type="submit">Submit</button>
+  </form>
+
+  <div class="container" *ngIf="weatherData">
+
+    <div class="upper-data">
+      <div class="upperImg" *ngIf="weatherData.main.temp > 15">
+        <img class="containerimg" src="../../assets/hot.PNG" alt="Hot Weather">
+        <div class="info-block">
+          <div class="overlay-content">
+            <div class="cityname">{{ weatherData.name }} {{ weatherData.country }}</div>
+            <div class="temp-num">{{ weatherData.main?.temp | number: '1.0-0' }} °C</div>
+            <br>
+            <span>{{ weatherData.dt | date: 'fullDate' }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="weather-container" *ngIf="weatherData.main.temp <= 15">
+        <img  src="../../assets/cold.PNG" alt="Cold Weather">
+        <div class="info-block">
+          <div class="overlay-content">
+            <div class="cityname">{{ weatherData.name }} {{ weatherData.country }}</div>
+            <div class="temp-num">{{ weatherData.main?.temp | number: '1.0-0' }} °C</div>
+            <br>
+            <span>{{ weatherData.dt | date: 'fullDate' }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="cardContainer" *ngIf="forecastData && forecastData.length > 0">
+    <div *ngFor="let forecast of forecastData.slice(0, 5)">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ formatDate(forecast.dt_txt ) }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img class="forecastimage" src="http://openweathermap.org/img/wn/{{ forecast.weather[0].icon }}.png" alt="Weather Icon" />
+        
+          <p>Highest: {{ forecast.main.temp_max | number: '1.0-0' }}°C</p>
+          <p>Lowest: {{ forecast.main.temp_min | number: '1.0-0' }}°C</p>
+          <!-- Add more details as per your requirement -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+  
+  
+</div>
+
+
+
+
+
+=======
  
 <div class="title">
   <h1>Local Weather</h1>
@@ -31,4 +100,5 @@
   </div>
 </div>
 </div>
+>>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880
 </body>
