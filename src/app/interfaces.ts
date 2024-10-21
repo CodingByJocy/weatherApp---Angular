@@ -1,10 +1,6 @@
 export interface ICurrentWeather {
   /*coord: Coord*/
-<<<<<<< HEAD
   /*weather: Weather*/
-=======
- /* weather: Weather[]*/
->>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880
   base: string
   main: Main
   /*visibility: number
@@ -54,7 +50,3 @@ export interface Sys {
   sunrise: number
   sunset: number
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 24ceb9179479bc97d1408d9e774c81f2154bc880
