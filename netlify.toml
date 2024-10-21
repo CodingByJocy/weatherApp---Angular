@@ -10,13 +10,4 @@ to = "/index.html"
 status = 200
 
 
-[build]
-  command = "ng build"
-  publish = "dist/weather-app"
-
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
 
